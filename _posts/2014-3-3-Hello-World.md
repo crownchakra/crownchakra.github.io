@@ -3,7 +3,7 @@ layout: post
 title: This is the first blog
 ---
 
-<h1>How to Retrieve Wi-Fi Passwords in Clear Text Using PowerShell</h1>
+<h1>Hack WiFi Passwords Using the Command Line</h1>
 
 # Checking Wi-Fi Credentials Using PowerShell
 
