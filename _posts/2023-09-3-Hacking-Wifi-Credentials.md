@@ -3,7 +3,7 @@ layout: post
 title: Hacking Wi-Fi Credentials
 ---
 
-### Stealing Wi-Fi Credentials Using Command Line
+### Extracting Wi-Fi Credentials Using Command Line
 
 ## Introduction
 
