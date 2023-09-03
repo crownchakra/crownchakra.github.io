@@ -38,7 +38,7 @@ To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Nets
 To view detailed information about a specific Wi-Fi profile, type the following command, replacing "Wi-Fi-SSID" with the name of the network you want to investigate:
 ```netsh wlan show profile name="Wi-Fi-SSID" ```
 
-![netsh](https://github.com/crownchakra/crownchakra.github.io/blob/master/wifi-images/02%20detailed%20profile.png)
+![_config.yml]({{ site.baseurl }}/wifi-images/02 detailed profile.png)
 
 ## Section 4: View Wi-Fi Passwords in clear-text
 
@@ -48,7 +48,7 @@ netsh wlan show profile name="Wi-Fi-SSID" key=clear```
 
  - Look for the "Key Content" field under the "Security settings" section. This will display the Wi-Fi password in clear text.
 
-![netsh](https://github.com/crownchakra/crownchakra.github.io/blob/master/wifi-images/03%20clear%20text%20credenials.png)
+![_config.yml]({{ site.baseurl }}/wifi-images/03 clear text credenials.png
 
 
 <!--Below comment is the example of using images in the blog-->
