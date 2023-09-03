@@ -55,6 +55,7 @@ netsh wlan show profile "profile name" key=clear```
 
 ```PS C:\WINDOWS\system32>.\WifiPasswordExtractor.ps1```
 
+References:
 ![_config.yml]({{ site.baseurl }}/wifi-images/04 wifi script.png)
 
 [WifiPasswordExtractor](https://github.com/sambiyal/WifiPasswordExtractor)
