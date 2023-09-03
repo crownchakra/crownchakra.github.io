@@ -3,11 +3,11 @@ layout: post
 title: Hacking Wi-Fi Credentials
 ---
 
-### Hacking Wi-Fi Credentials Using Command Line
+### Stealing Wi-Fi Credentials Using Command Line
 
 ## Introduction
 
-In our modern digital era, having access to Wi-Fi connectivity has become a fundamental necessity to stay connected to the internet, whether you're at home, in the office, or traveling. It's worth noting that Wi-Fi network credentials are typically stored in clear-text format, which means they can potentially be extracted or viewed under certain circumstances.
+In our modern digital era, having access to Wi-Fi connectivity has become a fundamental necessity to stay connected to the internet, whether you're at home, in the office, or traveling. It's worth noting that Wi-Fi network credentials are typically stored in clear-text format, which means they can potentially be extracted or viewed under certain circumstances. When we successfully compromise the host during pentest engagements, it's crucial to investigate the system for stored Wi-Fi credentials. The user may employ the same Wi-Fi password for their AD account.
 
 ## Section 1: Getting Started
 
