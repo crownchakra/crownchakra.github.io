@@ -3,7 +3,6 @@ layout: post
 title: Hacking Wi-Fi Credentials
 ---
 <!--
-
 # Hacking Wi-Fi Credentials Using Command Line
 -->
 ## Introduction
@@ -31,7 +30,7 @@ To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Nets
 - Open CMD/PowerShell with administrative privileges
 - To list available Wi-Fi networks, run: ```netsh wlan show networks```
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+![netsh](https://github.com/crownchakra/crownchakra.github.io/blob/master/wifi-images/01%20netsh%20wlan.png)
 
 ## Section 3: View Wi-Fi Profile Information
 
