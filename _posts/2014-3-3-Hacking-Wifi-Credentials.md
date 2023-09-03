@@ -1,19 +1,19 @@
 ---
 layout: post
-title: This is the first blog
+title: Hacking Wi-Fi Credentials
 ---
 
 <h1>Hack WiFi Passwords Using the Command Line</h1>
 
-# Checking Wi-Fi Credentials Using PowerShell
+# Hacking Wi-Fi Credentials Using Command Line
 
 ## Introduction
 
-In today's digital age, Wi-Fi connectivity is essential for staying connected to the internet, whether at home, at work, or on the go. Windows operating systems store Wi-Fi network credentials to make it easier for users to reconnect to known networks. However, there may be occasions when you need to access or verify these saved Wi-Fi credentials. In this guide, we will explore how to check Wi-Fi credentials using PowerShell, a powerful command-line tool available on Windows. By the end of this tutorial, you'll be equipped with the knowledge to retrieve Wi-Fi passwords, troubleshoot connectivity issues, and automate Wi-Fi tasks, all through the command-line interface.
+In today's digital age, Wi-Fi connectivity is essential for staying connected to the internet, whether at home, at work, or on the go. Windows operating systems store Wi-Fi network credentials to make it easier for users to reconnect to known networks.
 
 ## Section 1: Getting Started
 
-Before we dive into the world of PowerShell and Wi-Fi credentials, let's ensure that you have everything you need to get started.
+Before we dive into it, let's ensure that you have everything you need to get started.
 
 ### Prerequisites
 
@@ -21,18 +21,21 @@ To follow along with this tutorial, you'll need:
 
 - A Windows computer with administrative privileges.
 - Basic familiarity with the Windows operating system.
-- PowerShell installed, which is available on all modern Windows versions.
+- CMD/PowerShell.
 
-Now that we have the essentials in place, let's begin exploring how to list available Wi-Fi networks using PowerShell.
+Now that we have the essentials in place, let's begin exploring how to list available Wi-Fi networks using CMD/PowerShell.
 
 ## Section 2: Listing Available Wi-Fi Networks
 
-To interact with Wi-Fi networks through PowerShell, we'll be using the `Netsh` (Network Shell) command, a versatile tool for network configuration and management. Here's how to use PowerShell to list all available Wi-Fi networks:
+To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Netsh` (Network Shell) command, a versatile tool for network configuration and management. Here's how to use CMD/PowerShell to list all available Wi-Fi networks:
 
-```powershell
-# Open PowerShell with administrative privileges
-# To list available Wi-Fi networks, run:
-netsh wlan show networks
+- Open CMD/PowerShell with administrative privileges
+- To list available Wi-Fi networks, run:
+'''netsh wlan show networks'''
+
+## Section 3: View Wi-Fi Profile Information
+
+## Section 3: View Wi-Fi Passwords in clear-text
 
 
 
