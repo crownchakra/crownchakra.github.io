@@ -21,14 +21,14 @@ To follow along with this tutorial, you'll need:
 - Basic familiarity with the Windows operating system.
 - CMD/PowerShell.
 
-Now that we have the essentials in place, let's begin exploring how to list available Wi-Fi networks using CMD/PowerShell.
+Now that we have the essentials in place, let's begin exploring how to list available Wi-Fi networks/profiles using CMD/PowerShell.
 
 ## Section 2: Listing Available Wi-Fi Profiles
 
-To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Netsh` (Network Shell) command, a versatile tool for network configuration and management. Here's how to use CMD/PowerShell to list all available Wi-Fi profiles:
+To interact with Wi-Fi profiles through CMD/PowerShell, we'll be using the `Netsh` (Network Shell) command, a versatile tool for network configuration and management. Here's how to use CMD/PowerShell to list all available Wi-Fi profiles :
 
 - Open CMD/PowerShell with administrative privileges
-- To list available Wi-Fi networks, run: ```netsh wlan show profile```
+- To list available Wi-Fi networks/profiles, run: ```netsh wlan show profile```
 
 ![_config.yml]({{ site.baseurl }}/wifi-images/01 netsh wlan.png)
 
@@ -41,7 +41,7 @@ To view detailed information about a specific Wi-Fi profile, type the following 
 
 ## Section 4: View Wi-Fi Passwords in clear-text
 
-To view the password for a specific Wi-Fi network, use the following command, replacing `"Wi-Fi-SSID"` with the name of the network you want to check:
+To view the password for a specific Wi-Fi network/profile, use the following command, replacing `"Wi-Fi-SSID"` with the name of the network you want to check:
 ```
 netsh wlan show profile name="Wi-Fi-SSID" key=clear```
 
@@ -49,6 +49,9 @@ netsh wlan show profile name="Wi-Fi-SSID" key=clear```
 
 ![_config.yml]({{ site.baseurl }}/wifi-images/03 clear text credenials.png)
 
+## Section 5: Powershell script to extract all the Wi-fi credentials stored in clear-text
+
+[WifiPasswordExtractor](https://github.com/sambiyal/WifiPasswordExtractor)
 
 <!--Below comment is the example of using images in the blog-->
 
