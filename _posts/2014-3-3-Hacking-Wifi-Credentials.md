@@ -23,12 +23,12 @@ To follow along with this tutorial, you'll need:
 
 Now that we have the essentials in place, let's begin exploring how to list available Wi-Fi networks using CMD/PowerShell.
 
-## Section 2: Listing Available Wi-Fi Networks
+## Section 2: Listing Available Wi-Fi Profiles
 
-To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Netsh` (Network Shell) command, a versatile tool for network configuration and management. Here's how to use CMD/PowerShell to list all available Wi-Fi networks:
+To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Netsh` (Network Shell) command, a versatile tool for network configuration and management. Here's how to use CMD/PowerShell to list all available Wi-Fi profiles:
 
 - Open CMD/PowerShell with administrative privileges
-- To list available Wi-Fi networks, run: ```netsh wlan show networks```
+- To list available Wi-Fi networks, run: ```netsh wlan show profile```
 
 ![_config.yml]({{ site.baseurl }}/wifi-images/01 netsh wlan.png)
 
