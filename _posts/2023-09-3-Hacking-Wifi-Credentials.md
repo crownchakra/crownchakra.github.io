@@ -49,9 +49,9 @@ netsh wlan show profile "profile name" key=clear```
 
 ![_config.yml]({{ site.baseurl }}/wifi-images/03 clear text credenials.png)
 
-## Section 5: Powershell script to extract all the Wi-fi credentials stored in clear-text
+## Section 5: Script to extract all the Wi-fi credentials stored in clear-text
 
-- To extract all the passwords, I used the `WifiPasswordExtractor.ps1` script to extract the information written in PowerShell[^1].
+- To extract all the passwords, I used the `WifiPasswordExtractor.ps1` script to extract the information written in PowerShell.
 
 ```PS C:\WINDOWS\system32>.\WifiPasswordExtractor.ps1```
 
