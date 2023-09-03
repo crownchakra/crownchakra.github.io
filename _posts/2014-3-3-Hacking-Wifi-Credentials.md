@@ -7,7 +7,7 @@ title: Hacking Wi-Fi Credentials
 
 ## Introduction
 
-In today's digital age, Wi-Fi connectivity is essential for staying connected to the internet, whether at home, at work, or on the go. Windows operating systems store Wi-Fi network credentials to make it easier for users to reconnect to known networks.
+In our modern digital era, having access to Wi-Fi connectivity has become a fundamental necessity to stay connected to the internet, whether you're at home, in the office, or traveling. It's worth noting that Wi-Fi network credentials are typically stored in clear-text format, which means they can potentially be extracted or viewed under certain circumstances.
 
 ## Section 1: Getting Started
 
