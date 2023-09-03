@@ -2,11 +2,10 @@
 layout: post
 title: Hacking Wi-Fi Credentials
 ---
-
-<h1>Hack WiFi Passwords Using the Command Line</h1>
+<!--
 
 # Hacking Wi-Fi Credentials Using Command Line
-
+-->
 ## Introduction
 
 In today's digital age, Wi-Fi connectivity is essential for staying connected to the internet, whether at home, at work, or on the go. Windows operating systems store Wi-Fi network credentials to make it easier for users to reconnect to known networks.
@@ -37,13 +36,14 @@ To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Nets
 To view detailed information about a specific Wi-Fi profile, type the following command, replacing "Wi-Fi-SSID" with the name of the network you want to investigate:
 ```netsh wlan show profile name="Wi-Fi-SSID" ```
 
-## Section 3: View Wi-Fi Passwords in clear-text
+## Section 4: View Wi-Fi Passwords in clear-text
 
 To view the password for a specific Wi-Fi network, use the following command, replacing `"Wi-Fi-SSID"` with the name of the network you want to check:
+
      ```
      netsh wlan show profile name="Wi-Fi-SSID" key=clear
      ```
-     - Look for the "Key Content" field under the "Security settings" section. This will display the Wi-Fi password in clear text.
+ - Look for the "Key Content" field under the "Security settings" section. This will display the Wi-Fi password in clear text.
 
 
 <!--Below comment is the example of using images in the blog-->
