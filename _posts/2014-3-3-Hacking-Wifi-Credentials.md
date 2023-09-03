@@ -34,6 +34,11 @@ To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Nets
 '''netsh wlan show networks'''
 
 ## Section 3: View Wi-Fi Profile Information
+To view the password for a specific Wi-Fi network, use the following command, replacing `"Wi-Fi-SSID"` with the name of the network you want to check:
+     ```
+     netsh wlan show profile name="Wi-Fi-SSID" key=clear
+     ```
+     - Look for the "Key Content" field under the "Security settings" section. This will display the Wi-Fi password in clear text.
 
 ## Section 3: View Wi-Fi Passwords in clear-text
 
