@@ -51,7 +51,7 @@ netsh wlan show profile "profile name" key=clear```
 
 ## Section 5: Script to extract all the Wi-fi credentials stored in clear-text
 
-- To extract all the passwords, I used the `WifiPasswordExtractor.ps1` script to extract the information written in PowerShell.
+- I found handy script on github `WifiPasswordExtractor.ps1` to extract all the clear-text passwords.
 
 ```PS C:\WINDOWS\system32>.\WifiPasswordExtractor.ps1```
 
