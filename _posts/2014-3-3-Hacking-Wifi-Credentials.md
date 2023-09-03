@@ -31,6 +31,8 @@ To interact with Wi-Fi networks through CMD/PowerShell, we'll be using the `Nets
 - Open CMD/PowerShell with administrative privileges
 - To list available Wi-Fi networks, run: ```netsh wlan show networks```
 
+![_config.yml]({{ site.baseurl }}/images/config.png)
+
 ## Section 3: View Wi-Fi Profile Information
 
 To view detailed information about a specific Wi-Fi profile, type the following command, replacing "Wi-Fi-SSID" with the name of the network you want to investigate:
