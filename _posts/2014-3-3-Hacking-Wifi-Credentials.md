@@ -34,7 +34,7 @@ To interact with Wi-Fi profiles through CMD/PowerShell, we'll be using the `Nets
 
 ## Section 3: View Wi-Fi Profile Information
 
-To view detailed information about a specific Wi-Fi profile, type the following command, replacing "Wi-Fi-SSID" with the name of the network you want to investigate:
+To view detailed information about a specific Wi-Fi profile, type the following command, replacing "Wi-Fi-Profile" with the name of the network/profile you want to investigate:
 ```netsh wlan show profile "profile name" ```
 
 ![_config.yml]({{ site.baseurl }}/wifi-images/02 detailed profile.png)
