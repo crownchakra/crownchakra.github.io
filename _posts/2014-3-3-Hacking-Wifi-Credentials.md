@@ -2,9 +2,9 @@
 layout: post
 title: Hacking Wi-Fi Credentials
 ---
-<!--
-# Hacking Wi-Fi Credentials Using Command Line
--->
+
+### Hacking Wi-Fi Credentials Using Command Line
+
 ## Introduction
 
 In today's digital age, Wi-Fi connectivity is essential for staying connected to the internet, whether at home, at work, or on the go. Windows operating systems store Wi-Fi network credentials to make it easier for users to reconnect to known networks.
