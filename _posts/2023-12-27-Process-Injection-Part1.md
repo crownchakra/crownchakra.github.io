@@ -34,7 +34,7 @@ exec_mem = VirtualAlloc(0, payload_len, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE
 - Copy Payload: The payload is then copied to the newly allocated buffer using the RtlMoveMemory function. This sets the stage for the actual execution.
 
 ```c 
- RtlMoveMemory(exec_mem, payload, payload_len); ```
+ RtlMoveMemory(exec_mem, payload, payload_len);```
 
 - Memory Protection: To enable execution, the protection of the allocated memory is adjusted using VirtualProtect. The memory is now set to be executable and readable, paving the way for the payload's execution.
 
