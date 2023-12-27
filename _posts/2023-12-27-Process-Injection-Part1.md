@@ -38,7 +38,8 @@ exec_mem = VirtualAlloc(0, payload_len, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE
 
 - Memory Protection: To enable execution, the protection of the allocated memory is adjusted using VirtualProtect. The memory is now set to be executable and readable, paving the way for the payload's execution.
 
-rv = VirtualProtect(exec_mem, payload_len, PAGE_EXECUTE_READ, &oldprotect);
+```c
+rv = VirtualProtect(exec_mem, payload_len, PAGE_EXECUTE_READ, &oldprotect);```
 
 - Thread Creation: Assuming successful memory protection, a new thread (th) is spawned using CreateThread. The thread is tasked with executing the code residing at the address pointed to by exec_mem. To maintain control flow and observe the execution, the program waits for the created thread to finish using WaitForSingleObject.
 
