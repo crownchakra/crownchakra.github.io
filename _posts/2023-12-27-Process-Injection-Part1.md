@@ -1,10 +1,12 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Process Injection Part 1"
 ---
 
-# Welcome
+### Executing payload locally using shellcode.
 
-**Hello world**, this is my second Jekyll blog post.
+## Introduction
+
+This method employs Windows APIs like VirtualAlloc, VirtualProtect and CreateThread. No evasion or obfuscation techniques are employed in this; it's simple and straightforward with no emphasis on evasion.
 
 I hope you like it!
