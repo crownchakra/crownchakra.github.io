@@ -45,8 +45,6 @@ if (rv != 0) {
 th = CreateThread(0, 0, (LPTHREAD_START_ROUTINE) exec_mem, 0, 0, 0);
 WaitForSingleObject(th, -1);} ```
 
-<iframe width="420" height="315" src="http://www.youtube.com/bW3VQhcYu5A" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="http://www.youtube.com/bW3VQhcYu5A" frameborder="0"> </iframe>
 
-
-[![Alt text](https://img.youtube.com/vi/bW3VQhcYu5A/0.jpg)](https://youtu.be/bW3VQhcYu5A)
 
