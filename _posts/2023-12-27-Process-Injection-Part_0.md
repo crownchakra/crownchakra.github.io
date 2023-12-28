@@ -50,6 +50,9 @@ if (rv != 0) {
 th = CreateThread(0, 0, (LPTHREAD_START_ROUTINE) exec_mem, 0, 0, 0);
 WaitForSingleObject(th, -1);} ```
 
+##Conclusion##
+This basic guide provides a starting point for running shellcode via the creation of a new thread. Remember, this method is straightforward and lacks advanced evasion or obfuscation techniques. As you progress, consider exploring more sophisticated approaches to enhance the security and stealth of your shellcode execution.
+
 <iframe width="853" height="480" src="https://www.youtube.com/embed/RuDwyIZdduc" title="Process Injection 0 - Executing payload locally using shellcode." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
