@@ -11,7 +11,7 @@ If you're delving into the world of shellcode execution, one of the simplest and
 
 ## Section 1: Getting Started
 
-Getting Started with Running Shellcode Using Threads
+Getting Started with Running Shellcode Using Thread
 
 ### Utilized functions from the Windows APIs
 - **VirtualAlloc:** Reserves, commits, or changes the state of a region of pages in the virtual address space of the calling process
@@ -38,7 +38,7 @@ exec_mem = VirtualAlloc(0, payload_len, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE
 ```c
  RtlMoveMemory(exec_mem, payload, payload_len);```
 
-- Memory Protection: To enable execution, the protection of the allocated memory is adjusted using VirtualProtect. The memory is now set to be executable and readable, paving the way for the payloads execution.
+- Memory Protection: To enable execution, the protection of the allocated memory is adjusted using VirtualProtect. The memory is now set to be executable and readable, paving the way for the payload's execution.
 
 ```c
 rv = VirtualProtect(exec_mem, payload_len, PAGE_EXECUTE_READ, &oldprotect);```
