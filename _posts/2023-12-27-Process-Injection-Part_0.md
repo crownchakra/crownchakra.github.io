@@ -14,17 +14,17 @@ If you're delving into the world of shellcode execution, one of the simplest and
 Getting Started with Running Shellcode Using Threads
 
 ### Utilized functions from the Windows APIs
-- VirtualAlloc: Reserves, commits, or changes the state of a region of pages in the virtual address space of the calling process
+- **VirtualAlloc:** Reserves, commits, or changes the state of a region of pages in the virtual address space of the calling process
 
-- RtlMoveMemory: Copies the contents of a source memory block to a destination memory block, and supports overlapping source and destination memory blocks.
+- **RtlMoveMemory:** Copies the contents of a source memory block to a destination memory block, and supports overlapping source and destination memory blocks.
 
-- VirtualProtect: Changes the protection on a region of committed pages in the virtual address space of the calling process.
+- **VirtualProtect:** Changes the protection on a region of committed pages in the virtual address space of the calling process.
 
-- CreateThread: Creates a thread to execute within the virtual address space of the calling process.
+- **CreateThread:** Creates a thread to execute within the virtual address space of the calling process.
 
 ### Flow of the Program (key steps)
 
-- Memory Allocation: A critical step involves reserving and committing memory for the payload using the VirtualAlloc function. The allocated memory, referred to as exec_mem, is initially set to read and write.
+- **Memory Allocation:** A critical step involves reserving and committing memory for the payload using the VirtualAlloc function. The allocated memory, referred to as exec_mem, is initially set to read and write.
 
 ```c
 void *exec_mem;
