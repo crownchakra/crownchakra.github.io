@@ -40,7 +40,8 @@ unsigned char payload[] = {
   // ... (payload content)
 };
 
-unsigned int payload_len = sizeof(payload);```
+unsigned int payload_len = sizeof(payload); ```
+
 
 - Process Identification: (Identify the Process ID of "Notepad.exe" using FindProcessId)
 In this step, the program uses the FindProcessId function to determine the Process ID (PID) of the target process, which, in this example, is "Notepad.exe." The FindProcessId function takes the name of the target process as a parameter and iterates through the list of running processes to find a match. Here, the function uses the Windows API functions CreateToolhelp32Snapshot and Process32First/Process32Next to iterate through the list of processes, comparing each process name with the provided target name ("Notepad.exe"). When a match is found, the corresponding Process ID is returned.
