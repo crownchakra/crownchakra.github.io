@@ -3,7 +3,7 @@ layout: post
 title:  "Process Injection - 01"
 ---
 
-### Process Injection - Injecting shellcode into a remote process.
+### Injecting shellcode into a remote process.
 
 ## Introduction
 
