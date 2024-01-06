@@ -35,20 +35,16 @@ The success of remote process injection hinges on leveraging specific Win32API f
 
 - Payload definition: The payload variable encapsulates a block of machine code, acting as the payload intended for injection. This payload, in our example, is designed to open a calculator.
 
-<prev>
-<code>```
+```c 
 unsigned char payload[] = {
   // ... (payload content)
 };
-unsigned int payload_len = sizeof(payload); ```
-</code>
-</prev>
+unsigned int payload_len = sizeof(payload);```
 
 - Process Identification: (Identify the Process ID of "Notepad.exe" using FindProcessId)
 In this step, the program uses the FindProcessId function to determine the Process ID (PID) of the target process, which, in this example, is "Notepad.exe." The FindProcessId function takes the name of the target process as a parameter and iterates through the list of running processes to find a match. Here, the function uses the Windows API functions CreateToolhelp32Snapshot and Process32First/Process32Next to iterate through the list of processes, comparing each process name with the provided target name ("Notepad.exe"). When a match is found, the corresponding Process ID is returned.
 
-<prev>
-<code>
+```c
   int FindProcessId(const char *FprocessName) {
   HANDLE hProcessSnapshot;
   PROCESSENTRY32 pe32;
@@ -78,8 +74,7 @@ In this step, the program uses the FindProcessId function to determine the Proce
   CloseHandle(hProcessSnapshot);
   return pid;
 }
-</prev>
-</code>
+```
 
 - Open the Process:(If the Process ID is obtained, open the process with full access rights using OpenProcess)
 Once the Process ID is identified, the program uses the OpenProcess function to open the target process. This function returns a handle to the specified process, allowing subsequent operations on that process. In this snippet, the OpenProcess function is called with the identified Process ID and the desired access rights (PROCESS_ALL_ACCESS). If the function succeeds, it returns a handle (hProcess) to the opened process, signifying that subsequent operations can be performed on this process.
