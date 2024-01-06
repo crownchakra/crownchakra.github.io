@@ -153,7 +153,8 @@ int injectPayload(HANDLE ihProcess, unsigned char *iPayload, int iPayload_len) {
 
 Here, is the complete sketon of the code
 
-```c 
+<prev>
+<code>
 #include<stdio.h>
 #include<windows.h>
 #include<tlhelp32.h>
@@ -238,4 +239,6 @@ int main (void)
     }
 return 0;
 
-}```
+}
+</prev>
+</code>
