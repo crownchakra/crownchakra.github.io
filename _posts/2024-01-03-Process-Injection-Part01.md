@@ -37,7 +37,7 @@ The success of remote process injection hinges on leveraging specific Win32API f
 
 ```c
 unsigned char payload[] = {
-  // ... (payload content)
+  //(payload content)
 };
 unsigned int payload_len = sizeof(payload); ```
 
