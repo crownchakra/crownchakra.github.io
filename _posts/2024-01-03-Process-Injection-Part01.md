@@ -36,10 +36,10 @@ The success of remote process injection hinges on leveraging specific Win32API f
 - Payload definition: The payload variable encapsulates a block of machine code, acting as the payload intended for injection. This payload, in our example, is designed to open a calculator.
 
 <code>
-```c unsigned char payload[] = {
+unsigned char payload[] = {
   // ... (payload content)
 };
-unsigned int payload_len = sizeof(payload); ```
+unsigned int payload_len = sizeof(payload);
 </code>
 
 
