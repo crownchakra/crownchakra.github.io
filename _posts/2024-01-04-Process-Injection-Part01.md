@@ -106,7 +106,7 @@ The success of remote process injection hinges on leveraging specific Win32API f
 
 4. **Remote Process Injection:** If the process is successfully opened, inject the payload into the target process via the `injectPayload` function. Following the successful opening of the target process, the program proceeds to inject the payload. This involves allocating memory within the address space of the target process using `VirtualAllocEx` and writing the payload into that allocated memory with `WriteProcessMemory`. Here, the `injectPayload` function is called with the opened process handle (`hProcess`) and the payload information. The `injectPayload` function, which was defined earlier, handles the memory allocation and payload injection.
 
-    ```c
+    <pre>
     // Function to inject payload into the target process
     int injectPayload(HANDLE ihProcess, unsigned char *iPayload, int iPayload_len) {
         // Allocate memory in the remote process
@@ -130,3 +130,4 @@ The success of remote process injection hinges on leveraging specific Win32API f
         if (cremoteThread == NULL) {
             // Error handling
             VirtualFreeEx(ihProcess, rmem
+            </pre>
