@@ -45,34 +45,34 @@ unsigned int payload_len = sizeof(payload);```
 In this step, the program uses the FindProcessId function to determine the Process ID (PID) of the target process, which, in this example, is "Notepad.exe." The FindProcessId function takes the name of the target process as a parameter and iterates through the list of running processes to find a match. Here, the function uses the Windows API functions CreateToolhelp32Snapshot and Process32First/Process32Next to iterate through the list of processes, comparing each process name with the provided target name ("Notepad.exe"). When a match is found, the corresponding Process ID is returned.
 
 ```c
-  int FindProcessId(const char *FprocessName) {
-  HANDLE hProcessSnapshot;
-  PROCESSENTRY32 pe32;
-  DWORD pid = 0;
+int FindProcessId(const char *FprocessName) {
+HANDLE hProcessSnapshot;
+PROCESSENTRY32 pe32;
+DWORD pid = 0;
 
-  hProcessSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+hProcessSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 
-  if (hProcessSnapshot == INVALID_HANDLE_VALUE) {
-    // Error handling
-    return 0;
-  }
+if (hProcessSnapshot == INVALID_HANDLE_VALUE) {
+// Error handling
+return 0;
+}
 
-  pe32.dwSize = sizeof(PROCESSENTRY32);
-  if (!Process32First(hProcessSnapshot, &pe32)) {
-    // Error handling
-    CloseHandle(hProcessSnapshot);
-    return 0;
-  }
+pe32.dwSize = sizeof(PROCESSENTRY32);
+if (!Process32First(hProcessSnapshot, &pe32)) {
+// Error handling
+CloseHandle(hProcessSnapshot);
+return 0;
+}
 
-  while (Process32Next(hProcessSnapshot, &pe32)) {
-    if (_stricmp(FprocessName, pe32.szExeFile) == 0) {
-      pid = pe32.th32ProcessID;
-      break;
-    }
-  }
+while (Process32Next(hProcessSnapshot, &pe32)) {
+if (_stricmp(FprocessName, pe32.szExeFile) == 0) {
+pid = pe32.th32ProcessID;
+break;
+}
+}
 
-  CloseHandle(hProcessSnapshot);
-  return pid;
+CloseHandle(hProcessSnapshot);
+return pid;
 }
 ```
 
