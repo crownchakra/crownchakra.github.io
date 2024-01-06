@@ -129,4 +129,4 @@ The success of remote process injection hinges on leveraging specific Win32API f
 
         if (cremoteThread == NULL) {
             // Error handling
-            VirtualFreeEx(ihProcess
+            VirtualFreeEx(ihProcess, rmem
