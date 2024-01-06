@@ -131,3 +131,21 @@ The success of remote process injection hinges on leveraging specific Win32API f
             // Error handling
             VirtualFreeEx(ihProcess, rmem
             </pre>
+
+
+        ```c
+#include <stdio.h>
+
+int main() {
+printf("Hello, World!\n");
+return 0;
+}
+```
+
+<pre>
+```bash
+$ gcc -o my_program my_program.c
+$ ./my_program
+Hello, World!
+```
+</pre>
